@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>listado</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-list-header>
+            Recent Conversations
+        </ion-list-header>
+
+        <div *ngFor="let contacto of contactos | async">
+            <ion-item (click)="editar(contacto)">
+                <ion-label>
+                    <h2>{{ contacto.nombre }}</h2>
+                    <h3>{{ contacto.telefono }}</h3>
+                    <p>{{ contacto.direccion }}</p>
+                </ion-label>
+            </ion-item>
+        </div>
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="navCrear()">
+            <ion-icon name="arrow-forward-circle"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

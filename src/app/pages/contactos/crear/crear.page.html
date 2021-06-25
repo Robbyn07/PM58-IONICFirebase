@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Formulario de Creacion</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="fixed">Nombre: </ion-label>
+        <ion-input [(ngModel)]="contacto.nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="fixed">Telefono: </ion-label>
+        <ion-input [(ngModel)]="contacto.telefono"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label position="fixed">Direccion: </ion-label>
+        <ion-input [(ngModel)]="contacto.direccion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-button color="primary" (click)="guardar()">Guardar</ion-button>
+    </ion-item>
+
+
+    <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+        <ion-fab-button (click)="crear()">
+            <ion-icon name="arrow-back-circle"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="guardarTotal()">
+            <ion-icon name="checkmark-outline"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
